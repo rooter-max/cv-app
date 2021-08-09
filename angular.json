@@ -30,7 +30,6 @@
             "outputPath": "dist/cv-app/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "baseHref": "/cv/",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
