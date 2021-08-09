@@ -1,0 +1,85 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*",
+    ".storybook/typings.d.ts",
+    "dist/**/*"
+  ],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "parserOptions": {
+        "project": ["tsconfig.json", "e2e/tsconfig.json"],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "plugin:@angular-eslint/ng-cli-compat",
+        "plugin:@angular-eslint/ng-cli-compat--formatting-add-on",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
+        "import/no-unresolved": "off",
+        "import/prefer-default-export": "off",
+        "max-len": ["error", {
+          "code": 100,
+          "ignorePattern": "^import .*"
+        }],
+        "class-methods-use-this": "off",
+        "lines-between-class-members": "off",
+        "object-curly-spacing": ["error", "always"],
+        "no-shadow": "off",
+        "comma-dangle": "off",
+        "no-trailing-spaces": ["error", { "skipBlankLines": true }],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "camelCase"
+          }
+        ],
+        "@typescript-eslint/no-shadow": ["error"],
+        "@typescript-eslint/no-unused-vars": ["error"],
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": ["variable"],
+            "format": ["camelCase"]
+          },
+          {
+            "selector": "parameter",
+            "format": ["camelCase", "PascalCase"],
+            "leadingUnderscore": "allow"
+          },
+          {
+            "selector": "class",
+            "format": ["PascalCase"]
+          }
+        ],
+        "@typescript-eslint/ban-types": [
+          "error",
+          {
+            "extendDefaults": true,
+            "types": {
+              "object": false
+            }
+          }
+        ],
+        "@typescript-eslint/comma-dangle": ["error", "never"],
+        "@typescript-eslint/no-unused-expressions": ["error", { "allowTernary": true }]
+      }
+    },
+    {
+      "files": ["*.html"],
+      "extends": ["plugin:@angular-eslint/template/recommended"],
+      "rules": {}
+    }
+  ]
+}

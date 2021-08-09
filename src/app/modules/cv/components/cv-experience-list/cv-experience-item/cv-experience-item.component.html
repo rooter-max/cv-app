@@ -1,0 +1,15 @@
+<div class="experience-item flex flex-wrap">
+  <div class="w-full md:w-4/12 relative">
+    <div class="pl-5 text-gray-600">{{item.period}}</div>
+    <div class="pl-5 text-gray-600">{{item.location}}</div>
+  </div>
+  <div class="w-full pl-5 md:pl-0 md:w-8/12">
+    <div>{{item.position}}</div>
+    <div class="text-xl">{{item.title}}</div>
+    <ul class="py-4 list-disc pl-4 pb-10">
+      <li *ngFor="let desc of item.description">
+        {{desc}}
+      </li>
+    </ul>
+  </div>
+</div>

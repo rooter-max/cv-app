@@ -1,0 +1,8 @@
+<app-title [title]="experience.title"></app-title>
+<div class="flex flex-wrap experience-list">
+  <app-cv-experience-item *ngFor="let item of experience.items; let isLast = last"
+                          [item]="item"
+                          class="w-full"
+                          [class.last]="isLast"
+  ></app-cv-experience-item>
+</div>

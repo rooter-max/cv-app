@@ -1,0 +1,8 @@
+<div class="flex flex-wrap ml-5 sm:ml-10">
+  <ng-container *ngFor="let icon of icons; trackBy: identify">
+    <svg-icon
+      src="assets/images/icons/{{icon}}.svg"
+      [svgStyle]="{ 'width.px':50, 'height.px':50, 'margin-right.px':15, 'margin-bottom.px':15 }">
+    </svg-icon>
+  </ng-container>
+</div>

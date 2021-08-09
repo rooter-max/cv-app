@@ -1,0 +1,153 @@
+{
+  "full_name": "Maxim A. Usikov",
+  "position": "Team Lead, Front-end Developer",
+  "email": "max@rooter.in.ua",
+  "description": {
+    "hello": "Hi, I’am ",
+    "based": "+ based in Kiev, Ukraine",
+    "full": "I am 35 now and have 7+ experience in web development. I went all the way from a system administrator to a Front End Team Lead. I care about performance, standards and clean code. Recently I have been interested in various things like Backend, development process improvements, CI/CD and others. "
+  },
+  "experience": {
+    "title": "WORK Experience",
+    "items": [
+      {
+        "title": "Indevlab ltd",
+        "location": "Kiev",
+        "position": "Team Lead, Front-end Developer",
+        "period": "07/2017 – 06/2021",
+        "description": [
+          "Interviewing people for recruitment to the team",
+          "Creation and improvement of development processes",
+          "Develop isomorphic web application with  Angular Universal",
+          "Work with CI\\CD and E2E test",
+          "Experience with VueJs / NUXT",
+          "Work with various REST APIs",
+          "Develop websites with Wordpress CMS"
+        ]
+      },{
+        "title": "EitherSoft ltd",
+        "location": "Kiev",
+        "position": "Front-end Developer",
+        "period": "09/2016 – 07/2017",
+        "description": [
+          "Develop websites with Wordpress CMS",
+          "HTML, CSS",
+          "JavaScript, jQuery",
+          "Git, Jira, Scrum"
+        ]
+      },{
+        "title": "Individual entrepreneur",
+        "location": "",
+        "position": "Front-end Developer",
+        "period": "03/2014 – 09/2016",
+        "description": [
+          "Develop 20+ websites with Wordpress CMS, Joomla, OpenCart, MobX"
+        ]
+      },{
+        "title": "Ltd «MIIT»",
+        "location": "Kiev",
+        "position": "System Administrator",
+        "period": "03/2012 – 03/2014",
+        "description": [
+          "Administration Linux Server and network equipment",
+          "Monitoring servers and networking equipment",
+          "Monitoring and Administration Site (https://miit.ua, https://miit.tv)",
+          "Technical support for users (2 Line)"
+        ]
+      },{
+        "title": "Borys Grinchenko Kiev University",
+        "location": "Kiev",
+        "position": "System Administrator",
+        "period": "03/2008 – 03/2012",
+        "description": [
+          "Administration LAML Server (Debian)",
+          "Support mail system",
+          "Development and administration sites",
+          "Users support"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "EDUCATION",
+    "items": [
+      {
+        "title": "State University Of Information and Communication Technologies",
+        "location": "Kiev",
+        "position": "Bachelor's degree",
+        "period": "2007 – 2012",
+        "description": [
+          "Computer system and networks"
+        ]
+      },
+      {
+        "title": "Computer Academy «STEP»",
+        "location": "Kiev",
+        "position": "",
+        "period": "2005 – 2007",
+        "description": [
+          "System administration and networking technologies"
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "items": [
+      {
+        "title": "FrontEnd",
+        "items": ["CSS", "Sass", "Less", "Bootstrap", "JavaScript (ES6+)", "TypeScript", "Jquery", "ESLint", "WebSocket", "Socket.IO", "Vue", "Nuxt", "Rest API"]
+      },
+      {
+        "title": "Angular",
+        "items": ["SSR", "RxJS", "i18n", "Akita", "Reactive Form", "ng-select"]
+      },
+      {
+        "title": "Backend",
+        "items": ["NodeJs (Nestjs)", "Socket.io", "PHP"]
+      },
+      {
+        "title": "Tools",
+        "items": ["Git", "Gitlab", "Webpack", "Figma", "Docker", "Sentry"]
+      },
+      {
+        "title": "CI/CD",
+        "items": ["Gitlab CI/CD", "Jenkins"]
+      },
+      {
+        "title": "Test",
+        "items": ["Cypress"]
+      },
+      {
+        "title": "Other",
+        "items": ["Linux", "Wordpress", "Mysql", "WebStorm", "SEO", "Jira"]
+      },
+      {
+        "title": "",
+        "items": ["Problem solving skill"]
+      }
+    ]
+  },
+  "languages": {
+    "title": "Language",
+    "items": [
+      "Ukraine - native",
+      "Russian - native",
+      "English - A2"
+    ]
+  },
+  "social": {
+    "title": "Profiles",
+    "items": [
+      {
+        "title": "Linkedin",
+        "link": "https://linkedin.com/in/maksym-usikov/"
+      },
+      {
+        "title": "Github",
+        "link": "https://github.com/rooter-max"
+      }
+    ]
+  },
+  "icons": ["angular", "js", "html", "ts", "vue", "cypress", "gitlab", "socket-io", "docker" ]
+}

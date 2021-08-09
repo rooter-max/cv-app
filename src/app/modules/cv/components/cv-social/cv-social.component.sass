@@ -1,0 +1,19 @@
+\:host
+  position: absolute
+  left: -200px
+  top: 90px
+  transform: rotate(-90deg)
+
+.social-link
+  &:before
+    content: '•'
+
+// StyliLint doesn't support @media is sass files?
+// This hack for around it
+// Use scss or wait fixes
+=hack
+  @media (max-width: 840px)
+    \:host
+      position: static
+      transform: initial
++hack

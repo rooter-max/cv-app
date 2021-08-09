@@ -1,0 +1,16 @@
+\:host {
+  position: absolute;
+  left: -200px;
+  top: 90px;
+  transform: rotate(-90deg);
+  @media (max-width: 840px) {
+    position: static;
+    transform: initial;
+  }
+}
+
+.social-link {
+  &:before {
+    content: '•'
+  }
+}

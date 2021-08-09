@@ -1,0 +1,8 @@
+<app-title [title]="skills.title"></app-title>
+
+<p class="pb-4" *ngFor="let skill of skills.items; let isLast = last">
+  <strong>{{skill.title}}{{isLast ? '' : ': '}}</strong>
+  <ng-container *ngFor="let item of skill.items; let isLast = last">
+    {{item}}{{isLast ? '' : ', '}}
+  </ng-container>
+</p>

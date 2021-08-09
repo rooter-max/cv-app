@@ -1,0 +1,40 @@
+.experience-item
+  &:before
+    content: ""
+    width: 10px
+    height: 10px
+    background-color: #ddd
+    display: block
+    border-radius: 10px
+    position: absolute
+    top: 5px
+    left: -4px
+    z-index: 10
+    transition: .5s background-color
+
+  &:after
+    content: ""
+    width: 2px
+    height: calc(100% - 25px)
+    background-color: #ddd
+    display: block
+    border-radius: 10px
+    position: absolute
+    top: 22px
+    left: 0
+    transition: .5s background-color
+
+\:host
+  position: relative
+  &:hover
+    .experience-item
+      &:before, &:after
+        background: #999
+  &.last
+    .experience-item
+      &:after
+        background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(221,221,221,1) 100%)
+    &:hover
+      .experience-item
+        &:after
+          background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgb(193, 193, 193) 100%)

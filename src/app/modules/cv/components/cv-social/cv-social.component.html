@@ -1,0 +1,7 @@
+<app-title class="md:hidden" [title]="'Profiles'"></app-title>
+
+<a *ngFor="let profile of profiles.items"
+   href="{{profile.link}}"
+   class="social-link pr-4 no-underline">
+  {{profile.title}}
+</a>

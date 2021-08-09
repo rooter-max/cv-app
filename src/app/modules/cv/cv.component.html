@@ -1,0 +1,69 @@
+<main class='my-5 sm:my-20 font-mono text-gray-800'>
+
+  <section class="container mx-auto">
+    <div class="flex flex-col md:flex-row">
+      <app-cv-logo class='flex-initial self-center md:self-auto pb-10 md:pb-0'></app-cv-logo>
+      <div class='flex-1'>
+        <app-cv-personal-info
+          *ngIf="cvData.full_name && cvData.position"
+          [full_name]="cvData.full_name"
+          [description]="cvData.description"
+          [position]="cvData.position">
+        </app-cv-personal-info>
+        <app-cv-icons [icons]="cvData.icons"></app-cv-icons>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-experience container flex flex-wrap bg-white rounded-lg
+                  px-5 py-10 md:p-20 m-10 md:mt-20 mx-auto">
+    <div class="flex-1 order-2 lg:order-1 w-full lg:w-4/12">
+      <div class="flex flex-col sticky top-0 pr-0 sm:pr-20">
+
+        <app-cv-skills
+          class="block mb-10"
+          *ngIf="cvData.skills"
+          [skills]="cvData.skills">
+        </app-cv-skills>
+        <app-cv-languages
+          class="block mb-10"
+          *ngIf="cvData.languages"
+          [languages]="cvData.languages">
+        </app-cv-languages>
+        <app-cv-social
+          class="block mb-10"
+          *ngIf="cvData.social"
+          [profiles]="cvData.social">
+        </app-cv-social>
+        <app-cv-contact-me
+          class="block mb-10"
+          [linkedin]="linkedin"
+          [email]="cvData.email">
+        </app-cv-contact-me>
+      </div>
+    </div>
+
+    <div class="w-full order-1 lg:order-2 lg:w-8/12">
+      <app-cv-experience-list
+        class="pr-20 mb-10 block"
+        *ngIf="cvData.experience"
+        [experience]="cvData.experience"
+      ></app-cv-experience-list>
+      <app-cv-experience-list
+        class="pr-20 mb-10 block"
+        *ngIf="cvData.education"
+        [experience]="cvData.education"
+      ></app-cv-experience-list>
+    </div>
+  </section>
+</main>
+
+<div class="flex justify-center mb-10">
+  <a routerLink="about"
+     class="px-8 py-3 text-base font-medium rounded-md text-white no-underline bg-indigo-600 hover:bg-indigo-700 hover:text-white md:py-4 md:text-lg md:px-10">
+    About CV
+  </a>
+</div>
+
+
+<router-outlet></router-outlet>
