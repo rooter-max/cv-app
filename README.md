@@ -2,7 +2,7 @@
 
 This repository contains two things: my resume and my starter Angular template 
 
-### [Demo](https://rooter.in.ua/cv "rooter")
+### [Demo](https://cv.rooter.in.ua/ "rooter")
 
 
 ### Features:
