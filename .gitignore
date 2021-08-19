@@ -4,6 +4,7 @@
 /dist
 /tmp
 .tmp
+.heroku
 /out-tsc
 /storybook-static
 documentation.json
