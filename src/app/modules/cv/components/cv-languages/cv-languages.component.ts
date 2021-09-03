@@ -1,5 +1,6 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, Input, Inject, PLATFORM_ID } from '@angular/core';
 import { Languages } from '../../interface/cvdata';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-cv-languages',
@@ -9,13 +10,18 @@ import { Languages } from '../../interface/cvdata';
 })
 export class CvLanguagesComponent implements OnInit {
   @Input() languages: Languages = {} as Languages;
+  isBrowser: boolean
 
-  constructor() {
+  constructor(
+    @Inject(PLATFORM_ID) platformId: object
+  ) {
+    this.isBrowser = isPlatformBrowser(platformId);
   }
 
   ngOnInit(): void {
-    document.addEventListener('mousemove', this.parallax);
-
+    if (this.isBrowser) {
+      document.addEventListener('mousemove', this.parallax);
+    }
   }
 
   parallax(e: any) {

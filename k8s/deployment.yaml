@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cv-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cv-app
+  template:
+    metadata:
+      labels:
+        app: cv-app
+    spec:
+      containers:
+        - name: cv-app
+          image: registry.cloud.okteto.net/rooter-max/cv-app:okteto
+          ports:
+            - containerPort: 4000

@@ -5,7 +5,6 @@ import { CvLogoModule } from './components/cv-logo/cv-logo.module';
 import { CvRoutingModule } from './cv-routing.module';
 import { CvExperienceListModule } from './components/cv-experience-list/cv-experience-list.module';
 import { CvSkillsModule } from './components/cv-skills/cv-skills.module';
-import { HttpClientModule } from '@angular/common/http';
 import { CvService } from './services/cv.service';
 import { CvLanguagesModule } from './components/cv-languages/cv-languages.module';
 import { CvPersonalInfoModule } from './components/cv-personal-info/cv-personal-info.module';
@@ -19,7 +18,6 @@ import { CvContactMeModule } from './components/cv-contact-me/cv-contact-me.modu
   ],
   imports: [
     CommonModule,
-    HttpClientModule,
     CvRoutingModule,
     CvLogoModule,
     CvExperienceListModule,

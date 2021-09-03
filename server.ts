@@ -2,7 +2,7 @@ import 'zone.js/node';
 
 import { ngExpressEngine } from '@nguniversal/express-engine';
 import * as express from 'express';
-import { join } from 'path';
+import path, { join } from 'path';
 
 import { AppServerModule } from './src/main.server';
 import { APP_BASE_HREF } from '@angular/common';
@@ -12,7 +12,7 @@ import { existsSync } from 'fs';
 // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
 export function app(): express.Express {
   const server = express();
-  const distFolder = join(process.cwd(), 'dist/cv-app/browser');
+  const distFolder = path.join(__dirname, '..', 'browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html'))
     ? 'index.original.html'
     : 'index';
@@ -49,7 +49,7 @@ export function app(): express.Express {
 
 // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
 function run(): void {
-  const port = process.env.PORT || 4000;
+  const port = process.env.NODE_PORT || 4000;
 
   // Start up the Node server
   const server = app();

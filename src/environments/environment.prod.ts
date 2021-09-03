@@ -4,7 +4,9 @@
 
 export const environment = {
   production: true,
-  sentryDsn: ''
+  sentryDsn: '',
+  server_url: 'http://localhost:4000/',
+  host_url: 'http://localhost:4000/',
 };
 
 /*
