@@ -20,9 +20,9 @@ export class URLInterceptor implements HttpInterceptor {
   }
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    const url = this.isBrowser ? environment.server_url : environment.host_url;
+    const url = this.isBrowser ? '' : environment.server_host + ':' + environment.server_port;
     const clone = request.clone({
-      url: url + request.url
+      url: url + '/' + request.url
     });
     return next.handle(clone);
   }

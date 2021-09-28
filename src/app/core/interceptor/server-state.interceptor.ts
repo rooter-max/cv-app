@@ -16,7 +16,8 @@ export class ServerStateInterceptor implements HttpInterceptor {
     return next.handle(req).pipe(
       tap((event: HttpEvent<any>) => {
         if (event instanceof HttpResponse && event.status === 200) {
-          this.transferState.set(makeStateKey(req.url), event.body);
+          const url = new URL(req.url);
+          this.transferState.set(makeStateKey(url.pathname), event.body);
         }
       })
     );

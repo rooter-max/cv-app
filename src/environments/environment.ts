@@ -5,8 +5,10 @@
 export const environment = {
   production: false,
   sentryDsn: '',
-  server_url: 'http://localhost:4000/',
-  host_url: 'http://localhost:4000/',
+
+  // HTTP HOST for local request
+  server_host: 'http://localhost',
+  server_port: '4000'
 };
 
 /*

@@ -47,10 +47,10 @@ export interface Languages {
 
 export interface Profiles {
   title: string;
-  items: ProfilesItems[];
+  items: ProfilesItem[];
 }
 
-export interface ProfilesItems {
+export interface ProfilesItem {
   title: string;
   link: string;
 }

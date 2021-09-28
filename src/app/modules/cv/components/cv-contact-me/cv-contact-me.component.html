@@ -2,6 +2,6 @@
 
 <p class="pb-4">
   Please contact me on
-  <a class="underline hover:text-gray-500" href="{{linkedin.link}}">LinkedIn</a> or
+  <a class="underline hover:text-gray-500" *ngIf="linkedin" href="{{linkedin.link}}">LinkedIn</a> or
   <a class="underline hover:text-gray-500" href="mailto:{{hideEmail}}" (click)="onShowEmail()">Email</a>
 </p>

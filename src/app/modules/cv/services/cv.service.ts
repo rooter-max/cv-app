@@ -17,7 +17,7 @@ export class CvService {
    * Get cv data from json
    */
   getCvData(): Observable<any> {
-    return this.http.get<CVData>(`/assets/data.json`).pipe(
+    return this.http.get<CVData>(`assets/data.json`).pipe(
       tap((data: CVData) => {
         // console.log(data)
       }),

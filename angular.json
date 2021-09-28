@@ -77,6 +77,14 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
             }
           },
           "defaultConfiguration": ""
@@ -89,8 +97,12 @@
           "configurations": {
             "production": {
               "browserTarget": "cv-app:build:production"
+            },
+            "development": {
+              "browserTarget": "cv-app:build:development"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -155,22 +167,28 @@
               ],
               "sourceMap": false,
               "optimization": true
+            },
+            "development": {
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false
             }
           },
-          "defaultConfiguration": ""
+          "defaultConfiguration": "production"
         },
         "serve-ssr": {
           "builder": "@nguniversal/builders:ssr-dev-server",
-          "options": {
-            "browserTarget": "cv-app:build",
-            "serverTarget": "cv-app:server"
-          },
           "configurations": {
+            "development": {
+              "browserTarget": "cv-app:build:development",
+              "serverTarget": "cv-app:server:development"
+            },
             "production": {
               "browserTarget": "cv-app:build:production",
               "serverTarget": "cv-app:server:production"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "prerender": {
           "builder": "@nguniversal/builders:prerender",

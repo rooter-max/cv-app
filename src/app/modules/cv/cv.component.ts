@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { CvService } from './services/cv.service';
-import { CVData, ProfilesItems } from './interface/cvdata';
+import { CVData, ProfilesItem } from './interface/cvdata';
 
 @Component({
   selector: 'app-cv',
@@ -10,7 +10,7 @@ import { CVData, ProfilesItems } from './interface/cvdata';
 })
 export class CvComponent implements OnInit {
   cvData: CVData = {} as CVData;
-  linkedin?: ProfilesItems = {} as ProfilesItems;
+  linkedin: ProfilesItem | undefined = {} as ProfilesItem;
 
   constructor(
     private cvService: CvService,
