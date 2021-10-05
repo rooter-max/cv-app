@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cv-app-svc
+  labels:
+    app: cv-app
+spec:
+  selector:
+    app: cv-app
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 4000

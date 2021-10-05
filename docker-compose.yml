@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+    cv-app:
+        build:
+            context: ./
+        image: registry.cloud.okteto.net/rooter-max/cv-app:okteto
+        container_name: cv-app
+        ports:
+            - 80:4000
+        working_dir: /usr/local/app
+        restart: always

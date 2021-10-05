@@ -2,7 +2,7 @@
 
 This repository contains two things: my resume and my starter Angular template 
 
-### [Demo](https://cv.rooter.in.ua/ "rooter")
+### [Demo](https://cv-app-svc-rooter-max.cloud.okteto.net/ "rooter")
 
 
 ### Features:
@@ -14,7 +14,7 @@ This repository contains two things: my resume and my starter Angular template
 ### To-Do:
 - [ ] Karma, Cypress
 - [ ] Storybook
-- [ ] Sentry
+- [x] Sentry
 - [ ] Akita (state manager)
 - [ ] Service Workers
 - [ ] Dark mode

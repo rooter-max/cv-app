@@ -4,7 +4,11 @@
 
 export const environment = {
   production: true,
-  sentryDsn: ''
+  sentryDsn: '',
+
+  // HTTP HOST for local request
+  server_host: 'http://localhost',
+  server_port: '4000'
 };
 
 /*

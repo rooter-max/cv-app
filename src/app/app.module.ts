@@ -1,27 +1,29 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
 import { environment } from '../environments/environment';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { CommonModule, DatePipe } from '@angular/common';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { URLInterceptor } from './core/interceptor/url.interceptor';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     CommonModule,
     AppRoutingModule,
     environment.production ? [] : AkitaNgDevtools.forRoot(),
-    HttpClientModule,
-    BrowserAnimationsModule
+    HttpClientModule
   ],
   providers: [
-    DatePipe
+    DatePipe,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: URLInterceptor,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })

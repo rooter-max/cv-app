@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
-import { ProfilesItems } from '../../interface/cvdata';
+import { ProfilesItem } from '../../interface/cvdata';
 
 @Component({
   selector: 'app-cv-contact-me',
@@ -8,7 +8,7 @@ import { ProfilesItems } from '../../interface/cvdata';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CvContactMeComponent implements OnInit {
-  @Input() linkedin: ProfilesItems = {} as ProfilesItems;
+  @Input() linkedin?: ProfilesItem = {} as ProfilesItem;
   @Input() email = '';
   hideEmail = '';
 

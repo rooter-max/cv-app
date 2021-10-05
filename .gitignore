@@ -4,6 +4,7 @@
 /dist
 /tmp
 .tmp
+.heroku
 /out-tsc
 /storybook-static
 documentation.json
@@ -50,4 +51,3 @@ testem.log
 .DS_Store
 Thumbs.db
 /nbproject/private/
-.heroku
